@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-
   return (
-    <div>
-
-    </div>
-  )
+    <>
+      <h1>Hello world</h1>
+      <p>React implementation of /r/personalfinance Prime Directive</p>
+    </>
+  );
 }
 
 export default App;
