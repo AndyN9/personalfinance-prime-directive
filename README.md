@@ -4,5 +4,5 @@ React implementation of [/r/personalfinance Prime Directive](https://www.reddit.
 ## TODO
 - [x] clean up starter files
 - [x] add eslint + prettier
-- [ ] test react flow
+- [x] test react flow
 - [ ] create data file
