@@ -2,13 +2,13 @@ import React from 'react';
 
 const MARGIN = 25;
 const GAP = 100;
-const WIDTH_OF_NODE = 250;
-const HEIGHT_OF_NODE = 110;
+const NODE_WIDTH = 250;
+const NODE_HEIGHT = 110;
 
 function getGridPosition(cellX, cellY) {
   return {
-    x: cellX * (WIDTH_OF_NODE + GAP) + MARGIN,
-    y: cellY * (HEIGHT_OF_NODE + GAP) + MARGIN,
+    x: cellX * (NODE_WIDTH + GAP) + MARGIN,
+    y: cellY * (NODE_HEIGHT + GAP) + MARGIN,
   };
 }
 
