@@ -1,16 +1,6 @@
 import React from 'react';
 
-const MARGIN = 25;
-const GAP = 100;
-const NODE_WIDTH = 250;
-const NODE_HEIGHT = 110;
-
-function getGridPosition(cellX, cellY) {
-  return {
-    x: cellX * (NODE_WIDTH + GAP) + MARGIN,
-    y: cellY * (NODE_HEIGHT + GAP) + MARGIN,
-  };
-}
+// set nodes' initial position in order for onInit / createGraphLayout to work
 
 export default [
   {
@@ -27,8 +17,8 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(1, 0),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
   },
@@ -44,12 +34,10 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(0, 1),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
-    targetPosition: 'top',
-    sourcePosition: 'right',
   },
   {
     id: 'phase-0-step-2',
@@ -64,12 +52,10 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(1, 1),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
-    targetPosition: 'left',
-    sourcePosition: 'right',
   },
   {
     id: 'phase-0-step-3',
@@ -83,12 +69,10 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(2, 1),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
-    targetPosition: 'left',
-    sourcePosition: 'bottom',
   },
   {
     id: 'phase-0-step-4',
@@ -103,12 +87,10 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(2, 2),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
-    targetPosition: 'top',
-    sourcePosition: 'left',
   },
   {
     id: 'phase-0-step-5',
@@ -122,12 +104,10 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(1, 2),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
-    targetPosition: 'right',
-    sourcePosition: 'left',
   },
   {
     id: 'phase-0-step-6',
@@ -141,11 +121,9 @@ export default [
         </>
       ),
     },
-    position: getGridPosition(0, 2),
-    parentNode: 'phase-0',
+    position: { x: 0, y: 0 },
+    // parentNode: 'phase-0',
     extends: 'parent',
     className: 'step phase-0',
-    targetPosition: 'right',
-    sourcePosition: 'bottom',
   },
 ];
