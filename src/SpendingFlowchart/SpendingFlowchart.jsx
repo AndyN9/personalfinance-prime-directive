@@ -9,6 +9,7 @@ import initialEdges from './spendingEdges';
 
 export default function SpendingFlowchart() {
   const [nodes, setNodes] = useState(initialNodes);
+  // eslint-disable-next-line no-unused-vars
   const [edges, setEdges] = useState(initialEdges);
 
   const onInit = (reactFlowInstance) => {

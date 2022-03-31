@@ -1,8 +1,14 @@
 import React from 'react';
 
 // set nodes' initial position in order for onInit / createGraphLayout to work
+function generateDefaultProperties(phaseNumber) {
+  return {
+    position: { x: 0, y: 0 },
+    className: `step phase-${phaseNumber}`,
+  };
+}
 
-export default [
+const phase0Nodes = [
   {
     id: 'phase-0-step-0',
     type: 'input',
@@ -17,8 +23,7 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
   {
     id: 'phase-0-step-1',
@@ -32,8 +37,7 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
   {
     id: 'phase-0-step-2',
@@ -48,8 +52,7 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
   {
     id: 'phase-0-step-3',
@@ -63,8 +66,7 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
   {
     id: 'phase-0-step-4',
@@ -79,8 +81,7 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
   {
     id: 'phase-0-step-5',
@@ -94,8 +95,7 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
   {
     id: 'phase-0-step-6',
@@ -109,7 +109,8 @@ export default [
         </>
       ),
     },
-    position: { x: -100, y: -100 },
-    className: 'step phase-0',
+    ...generateDefaultProperties(0),
   },
 ];
+
+export default phase0Nodes;
