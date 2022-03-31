@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import ReactFlow, { MiniMap, Controls } from 'react-flow-renderer';
-import createGraphLayout from '../createGraphLayout';
+import createGraphLayout from './createGraphLayout';
 
 import './spending-flowchart.scss';
 
-import phaseNodes from './data/phaseNodes';
-import spendingNodes from './data/spendingNodes';
-import initialEdges from './data/spendingEdges';
-
-// const initialNodes = phaseNodes.concat(spendingNodes);
-const initialNodes = spendingNodes;
+import initialNodes from './spendingNodes';
+import initialEdges from './spendingEdges';
 
 export default function SpendingFlowchart() {
   const [nodes, setNodes] = useState(initialNodes);
@@ -20,9 +16,8 @@ export default function SpendingFlowchart() {
       reactFlowInstance.getNodes(),
       reactFlowInstance.getEdges()
     )
-      .then((els) => setNodes(els))
-      .catch((err) => console.error(err));
-    reactFlowInstance.fitView();
+      .then((newNodes) => setNodes(newNodes))
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -31,6 +26,7 @@ export default function SpendingFlowchart() {
         nodes={nodes}
         edges={edges}
         onInit={onInit}
+        fitView
         nodesDraggable={false}
         nodesConnectable={false}
         elementsSelectable={false}

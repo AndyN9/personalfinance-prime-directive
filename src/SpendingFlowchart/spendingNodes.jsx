@@ -17,9 +17,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
   {
@@ -34,9 +32,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
   {
@@ -52,9 +48,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
   {
@@ -69,9 +63,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
   {
@@ -87,9 +79,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
   {
@@ -104,9 +94,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
   {
@@ -121,9 +109,7 @@ export default [
         </>
       ),
     },
-    position: { x: 0, y: 0 },
-    // parentNode: 'phase-0',
-    extends: 'parent',
+    position: { x: -100, y: -100 },
     className: 'step phase-0',
   },
 ];

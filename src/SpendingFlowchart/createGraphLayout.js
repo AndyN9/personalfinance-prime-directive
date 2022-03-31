@@ -8,7 +8,6 @@ https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2
 
 const DEFAULT_WIDTH = 250;
 const DEFAULT_HEIGHT = 110;
-const DEFAULT_WIDTH_FOR_ROOT = 170;
 
 const elk = new Elk({
   defaultLayoutOptions: {
@@ -24,12 +23,13 @@ const createGraphLayout = async (nodes, edges) => {
   const elkEdges = [];
 
   nodes.forEach((flowNode) => {
+    if (flowNode.type === 'group') {
+      return;
+    }
+
     elkNodes.push({
       id: flowNode.id,
-      width:
-        flowNode.id === '0'
-          ? DEFAULT_WIDTH_FOR_ROOT
-          : flowNode.width ?? DEFAULT_WIDTH,
+      width: flowNode.width ?? DEFAULT_WIDTH,
       height: flowNode.height ?? DEFAULT_HEIGHT,
     });
   });
@@ -49,6 +49,10 @@ const createGraphLayout = async (nodes, edges) => {
   });
 
   return nodes.map((flowNode) => {
+    if (flowNode.type === 'group') {
+      return flowNode;
+    }
+
     const node = newGraph?.children?.find((n) => n.id === flowNode.id);
     if (node?.x && node?.y && node?.width && node?.height) {
       flowNode.position = {
