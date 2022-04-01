@@ -138,4 +138,30 @@ const phase1Nodes = [
   },
 ];
 
-export default [...phase0Nodes, ...phase1Nodes];
+const phase2Nodes = [
+  {
+    id: 'phase-2-step-0',
+    data: {
+      label: (
+        <strong>
+          Does your employer offer a retirement account with an employer match?
+        </strong>
+      ),
+    },
+    ...generateDefaultPhaseNodeProperties(2),
+  },
+  {
+    id: 'phase-2-step-1',
+    data: {
+      label: (
+        <strong>
+          Contribute the amount needed to get the full employer match, but
+          nothing above that amount.
+        </strong>
+      ),
+    },
+    ...generateDefaultPhaseNodeProperties(2),
+  },
+];
+
+export default [...phase0Nodes, ...phase1Nodes, ...phase2Nodes];

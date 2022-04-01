@@ -30,4 +30,9 @@ const phase1Edges = [
   'phase-1-step-0-to-phase-1-step-1',
 ].map((edgeId) => parse(edgeId));
 
-export default [...phase0Edges, ...phase1Edges];
+const phase2Edges = [
+  'phase-1-step-1-to-phase-2-step-0',
+  'phase-2-step-0-to-phase-2-step-1',
+].map((edgeId) => parse(edgeId));
+
+export default [...phase0Edges, ...phase1Edges, ...phase2Edges];
