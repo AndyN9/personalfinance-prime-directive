@@ -1,11 +1,17 @@
 import React from 'react';
 
-function generateDefaultPhaseNodeProperties(phaseNumber) {
-  return {
+function createFlow(node) {
+  const phase = node.id.split('-step-')[0];
+  const defaultNodeProperties = {
     type: 'default',
     // set nodes' initial position in order for onInit / createGraphLayout to work
     position: { x: 0, y: 0 },
-    className: `step phase-${phaseNumber}`,
+    className: `step ${phase}`,
+  };
+
+  return {
+    ...defaultNodeProperties,
+    ...node,
   };
 }
 
@@ -23,7 +29,6 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
     type: 'input',
   },
   {
@@ -37,7 +42,6 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-2',
@@ -51,7 +55,6 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-3',
@@ -64,7 +67,6 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-4',
@@ -78,7 +80,6 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-5',
@@ -91,7 +92,6 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-6',
@@ -104,9 +104,8 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(0),
   },
-];
+].map((node) => createFlow(node));
 
 const phase1Nodes = [
   {
@@ -121,7 +120,6 @@ const phase1Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(1),
   },
   {
     id: 'phase-1-step-1',
@@ -134,9 +132,8 @@ const phase1Nodes = [
         </>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(1),
   },
-];
+].map((node) => createFlow(node));
 
 const phase2Nodes = [
   {
@@ -148,7 +145,6 @@ const phase2Nodes = [
         </strong>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(2),
   },
   {
     id: 'phase-2-step-1',
@@ -160,8 +156,7 @@ const phase2Nodes = [
         </strong>
       ),
     },
-    ...generateDefaultPhaseNodeProperties(2),
   },
-];
+].map((node) => createFlow(node));
 
 export default [...phase0Nodes, ...phase1Nodes, ...phase2Nodes];
