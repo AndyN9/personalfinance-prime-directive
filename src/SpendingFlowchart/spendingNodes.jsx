@@ -108,4 +108,34 @@ const phase0Nodes = [
   },
 ];
 
-export default phase0Nodes;
+const phase1Nodes = [
+  {
+    id: 'phase-1-step-0',
+    data: {
+      label: (
+        <>
+          <strong>Build Small Emergency Fund</strong>
+          <br />
+          (Either $1000 or one month's worth of expenses, whichever is greater;
+          use a savings account or checking account.)
+        </>
+      ),
+    },
+    ...generateDefaultProperties(1),
+  },
+  {
+    id: 'phase-1-step-1',
+    data: {
+      label: (
+        <>
+          <strong>Pay Any Non-Essential Bills in Full</strong>
+          <br />
+          (Cable, internet, phone, etc.)
+        </>
+      ),
+    },
+    ...generateDefaultProperties(1),
+  },
+];
+
+export default [...phase0Nodes, ...phase1Nodes];
