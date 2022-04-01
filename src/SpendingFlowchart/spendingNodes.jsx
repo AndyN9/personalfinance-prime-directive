@@ -3,6 +3,7 @@ import React from 'react';
 // set nodes' initial position in order for onInit / createGraphLayout to work
 function generateDefaultProperties(phaseNumber) {
   return {
+    type: 'default',
     position: { x: 0, y: 0 },
     className: `step phase-${phaseNumber}`,
   };
@@ -11,7 +12,6 @@ function generateDefaultProperties(phaseNumber) {
 const phase0Nodes = [
   {
     id: 'phase-0-step-0',
-    type: 'input',
     data: {
       label: (
         <>
@@ -24,10 +24,10 @@ const phase0Nodes = [
       ),
     },
     ...generateDefaultProperties(0),
+    type: 'input',
   },
   {
     id: 'phase-0-step-1',
-    type: 'default',
     data: {
       label: (
         <>
@@ -41,7 +41,6 @@ const phase0Nodes = [
   },
   {
     id: 'phase-0-step-2',
-    type: 'default',
     data: {
       label: (
         <>
@@ -56,7 +55,6 @@ const phase0Nodes = [
   },
   {
     id: 'phase-0-step-3',
-    type: 'default',
     data: {
       label: (
         <>
@@ -70,7 +68,6 @@ const phase0Nodes = [
   },
   {
     id: 'phase-0-step-4',
-    type: 'default',
     data: {
       label: (
         <>
@@ -85,7 +82,6 @@ const phase0Nodes = [
   },
   {
     id: 'phase-0-step-5',
-    type: 'default',
     data: {
       label: (
         <>
@@ -99,7 +95,6 @@ const phase0Nodes = [
   },
   {
     id: 'phase-0-step-6',
-    type: 'default',
     data: {
       label: (
         <>
