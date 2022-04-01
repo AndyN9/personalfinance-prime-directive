@@ -19,6 +19,7 @@ export default function SpendingFlowchart() {
     )
       .then((newNodes) => setNodes(newNodes))
       .catch((error) => console.error(error));
+    reactFlowInstance.fitView();
   };
 
   return (
