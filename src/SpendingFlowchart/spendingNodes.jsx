@@ -1,9 +1,9 @@
 import React from 'react';
 
-// set nodes' initial position in order for onInit / createGraphLayout to work
-function generateDefaultProperties(phaseNumber) {
+function generateDefaultPhaseNodeProperties(phaseNumber) {
   return {
     type: 'default',
+    // set nodes' initial position in order for onInit / createGraphLayout to work
     position: { x: 0, y: 0 },
     className: `step phase-${phaseNumber}`,
   };
@@ -23,7 +23,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
     type: 'input',
   },
   {
@@ -37,7 +37,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-2',
@@ -51,7 +51,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-3',
@@ -64,7 +64,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-4',
@@ -78,7 +78,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-5',
@@ -91,7 +91,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
   },
   {
     id: 'phase-0-step-6',
@@ -104,7 +104,7 @@ const phase0Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(0),
+    ...generateDefaultPhaseNodeProperties(0),
   },
 ];
 
@@ -121,7 +121,7 @@ const phase1Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(1),
+    ...generateDefaultPhaseNodeProperties(1),
   },
   {
     id: 'phase-1-step-1',
@@ -134,7 +134,7 @@ const phase1Nodes = [
         </>
       ),
     },
-    ...generateDefaultProperties(1),
+    ...generateDefaultPhaseNodeProperties(1),
   },
 ];
 
