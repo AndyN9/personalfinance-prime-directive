@@ -16,21 +16,18 @@ function parse(edgeId) {
   };
 }
 
-const phase0EdgeIds = [
+const phase0Edges = [
   'phase-0-step-0-to-phase-0-step-1',
   'phase-0-step-1-to-phase-0-step-2',
   'phase-0-step-2-to-phase-0-step-3',
   'phase-0-step-3-to-phase-0-step-4',
   'phase-0-step-4-to-phase-0-step-5',
   'phase-0-step-5-to-phase-0-step-6',
-];
+].map((edgeId) => parse(edgeId));
 
-const phase1EdgeIds = [
+const phase1Edges = [
   'phase-0-step-6-to-phase-1-step-0',
   'phase-1-step-0-to-phase-1-step-1',
-];
-
-const phase0Edges = phase0EdgeIds.map((edgeId) => parse(edgeId));
-const phase1Edges = phase1EdgeIds.map((edgeId) => parse(edgeId));
+].map((edgeId) => parse(edgeId));
 
 export default [...phase0Edges, ...phase1Edges];
