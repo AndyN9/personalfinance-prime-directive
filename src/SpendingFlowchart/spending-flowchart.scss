@@ -11,3 +11,32 @@
 .react-flow__handle {
   display: none;
 }
+
+// TODO loop over with sass
+.phase-0 {
+  border-color: navy;
+}
+
+.phase-1 {
+  border-color: red;
+}
+
+.phase-2 {
+  border-color: yellow;
+}
+
+.phase-3 {
+  border-color: green;
+}
+
+.phase-4 {
+  border-color: lightblue;
+}
+
+.phase-5 {
+  border-color: blue;
+}
+
+.phase-6 {
+  border-color: purple;
+}
