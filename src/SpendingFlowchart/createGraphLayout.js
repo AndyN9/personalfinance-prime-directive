@@ -1,9 +1,10 @@
 import Elk from 'elkjs';
 
-/* From https://github.com/wbkd/react-flow/issues/5#issuecomment-954001434 */
 /*
-Get a sense of the parameters at:
-https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges
+  From https://github.com/wbkd/react-flow/issues/5#issuecomment-954001434
+
+  Get a sense of the parameters at:
+    https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges
 */
 
 const DEFAULT_WIDTH = 250;
