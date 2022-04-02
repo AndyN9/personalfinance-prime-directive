@@ -54,10 +54,6 @@ const createGraphLayout = async (nodes, edges) => {
   });
 
   return nodes.map((flowNode) => {
-    if (flowNode.type === 'group') {
-      return flowNode;
-    }
-
     const node = newGraph?.children?.find((n) => n.id === flowNode.id);
     if (node?.x && node?.y && node?.width && node?.height) {
       flowNode.position = {
