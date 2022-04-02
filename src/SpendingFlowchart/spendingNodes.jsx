@@ -133,6 +133,18 @@ const phase1Nodes = [
       ),
     },
   },
+  {
+    id: 'phase-1-step-2',
+    data: {
+      label: (
+        <>
+          <strong>Increase Emergency Fund to 3-6 Months Living Expenses</strong>
+          <br />
+          (Use a savings or checking account.)
+        </>
+      ),
+    },
+  },
 ].map((node) => createFlow(node));
 
 const phase2Nodes = [
@@ -159,4 +171,31 @@ const phase2Nodes = [
   },
 ].map((node) => createFlow(node));
 
-export default [...phase0Nodes, ...phase1Nodes, ...phase2Nodes];
+const phase3Nodes = [
+  {
+    id: 'phase-3-step-0',
+    data: {
+      label: (
+        <>
+          <strong>Do you have any high interest debt?</strong>
+          <br />
+          (i.e. debt with an interest rate of 10$ or higher)
+        </>
+      ),
+    },
+  },
+  {
+    id: 'phase-3-step-1',
+    data: {
+      label: (
+        <strong>
+          Evaluate the merits of the 'Avalanche' and 'Snowball' methods and
+          their advantages in your personal financial/psychological situation
+          and apply accordingly to pay off these debts.
+        </strong>
+      ),
+    },
+  },
+].map((node) => createFlow(node));
+
+export default [...phase0Nodes, ...phase1Nodes, ...phase2Nodes, ...phase3Nodes];
