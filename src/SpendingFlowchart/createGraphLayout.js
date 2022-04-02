@@ -36,6 +36,10 @@ const createGraphLayout = async (nodes, edges) => {
   });
 
   edges.forEach((flowEdge) => {
+    if (flowEdge.skip) {
+      return;
+    }
+
     elkEdges.push({
       id: flowEdge.id,
       target: flowEdge.target,

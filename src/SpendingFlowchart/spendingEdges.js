@@ -32,6 +32,8 @@ const phase1Edges = [
 
 const phase2Edges = [
   { id: 'phase-2-step-0-to-phase-2-step-1', label: 'Yes' },
+  { id: 'phase-2-step-0-to-phase-3-step-0', label: 'No' },
+  { id: 'phase-2-step-1-to-phase-3-step-0', skip: true },
 ].map((edge) => createFlow(edge));
 
 export default [...phase0Edges, ...phase1Edges, ...phase2Edges];
