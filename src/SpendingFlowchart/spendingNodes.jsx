@@ -1,4 +1,5 @@
 import React from 'react';
+import { Handle } from 'react-flow-renderer';
 
 function createFlow(node) {
   const phase = node.id.split('-step-')[0];
@@ -156,7 +157,18 @@ const phase2Nodes = [
           Does your employer offer a retirement account with an employer match?
         </strong>
       ),
+      handles: [
+        <Handle type="target" />,
+        <Handle id="no" type="source" position="bottom" style={{ left: 50 }} />,
+        <Handle
+          id="yes"
+          type="source"
+          position="bottom"
+          style={{ left: 200 }}
+        />,
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-2-step-1',
