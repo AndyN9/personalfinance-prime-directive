@@ -180,6 +180,7 @@ const phase2Nodes = [
         </strong>
       ),
     },
+    sourcePosition: 'left',
   },
 ].map((node) => createFlow(node));
 
