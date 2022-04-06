@@ -9,8 +9,14 @@ React implementation of [/r/personalfinance Prime Directive](https://www.reddit.
   - [x] phases group nodes
   - [ ] spending nodes
     - [x] phase 0
+    - [x] phase 1
+    - [x] phase 2
+    - [ ] phase 3
   - [ ] spending edges
     - [x] phase 0
+    - [x] phase 1
+    - [x] phase 2
+    - [ ] phase 3
 - [ ] create components
   - [ ] title
     - [ ] sub-title (credits)

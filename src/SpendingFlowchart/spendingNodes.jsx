@@ -252,11 +252,10 @@ const phase3Nodes = [
         {
           type: 'target',
           position: 'top',
-          style: { left: 50 },
         },
         {
           type: 'source',
-          position: 'top',
+          position: 'left',
         },
       ],
     },
