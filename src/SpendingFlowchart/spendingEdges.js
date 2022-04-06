@@ -96,6 +96,33 @@ const phase4Edges = [
   },
   {
     id: 'phase-4-step-2-to-phase-5-step-0',
+    skip: true,
+    animated: true,
+  },
+].map((edge) => createFlow(edge));
+
+const phase5Edges = [
+  {
+    id: 'phase-5-step-0-to-phase-5-step-1',
+    label: 'No',
+  },
+  {
+    id: 'phase-5-step-1-to-phase-5-step-2',
+    label: 'Yes',
+  },
+  {
+    id: 'phase-5-step-2-to-phase-5-step-0',
+    skip: true,
+    animated: true,
+  },
+  {
+    id: 'phase-5-step-1-to-phase-5-step-3',
+    label: 'No',
+  },
+  {
+    id: 'phase-5-step-3-to-phase-5-step-0',
+    skip: true,
+    animated: true,
   },
 ].map((edge) => createFlow(edge));
 
@@ -105,4 +132,5 @@ export default [
   ...phase2Edges,
   ...phase3Edges,
   ...phase4Edges,
+  ...phase5Edges,
 ];

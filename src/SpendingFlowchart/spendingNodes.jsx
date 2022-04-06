@@ -308,7 +308,7 @@ const phase4Nodes = [
       label: (
         <>
           <strong>
-            Are you expecting any large, required purchase or personal
+            Are you expecting any large, <em>required</em> purchase or personal
             investments in the near future?
           </strong>
           <br />
@@ -331,10 +331,64 @@ const phase4Nodes = [
   },
 ].map((node) => createFlow(node));
 
+const phase5Nodes = [
+  {
+    id: 'phase-5-step-0',
+    data: {
+      label: (
+        <>
+          <strong>
+            Are you currently saving <em>at least</em> 15% of your pre-tax
+            income for retirement?
+          </strong>
+          <br />
+          (Total contributions to all retirement accounts; note that you may
+          need to save more if you are behind on retirement savings.)
+        </>
+      ),
+    },
+  },
+  {
+    id: 'phase-5-step-1',
+    data: {
+      label: (
+        <strong>
+          Does your employer offer a 401(k), 403(b), or similar retirement plan
+          into which you could save more money?
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-5-step-2',
+    data: {
+      label: (
+        <strong>
+          Increase contributions until you have reached 15% pre-tax income being
+          saved for retirement.
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-5-step-3',
+    data: {
+      label: (
+        <strong>
+          If self-employed, contribute to an Individual 401(k), SEP-IRA, or
+          SIMPLE IRA to reach 15% pre-tax income saved; if not self-employed,
+          contribute to a taxable account to reach this goal.
+        </strong>
+      ),
+    },
+  },
+].map((node) => createFlow(node));
+
 export default [
   ...phase0Nodes,
   ...phase1Nodes,
   ...phase2Nodes,
   ...phase3Nodes,
   ...phase4Nodes,
+  ...phase5Nodes,
 ];
