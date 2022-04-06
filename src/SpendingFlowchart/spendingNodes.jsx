@@ -384,6 +384,98 @@ const phase5Nodes = [
   },
 ].map((node) => createFlow(node));
 
+const phase6Nodes = [
+  {
+    id: 'phase-6-step-0',
+    data: {
+      label: (
+        <strong>
+          Do you have a qualified high-deductible health plan and are thus
+          eligible for an investable HSA?
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-6-step-1',
+    data: {
+      label: <strong>Max yearly HSA contributions</strong>,
+    },
+  },
+  {
+    id: 'phase-6-step-2',
+    data: {
+      label: (
+        <strong>
+          Do you have children and wish to help pay for some or all of their
+          college expenses?
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-6-step-3',
+    data: {
+      label: (
+        <strong>
+          Evaluate available savings/investment options, such as 529 plan, and
+          contribute accordingly.
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-6-step-4',
+    data: {
+      label: (
+        <strong>
+          At this point, you have some options on how to proceed, and it is
+          completely up to you and your personal goals and desires.
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-6-step-5',
+    data: {
+      label: <strong>Would you like to retire early?</strong>,
+    },
+  },
+  {
+    id: 'phase-6-step-6',
+    data: {
+      label: (
+        <strong>
+          Max out 401(k), 403(b), or other employer sponsored account, consider
+          the 'mega backdoor Roth IRA', then use a taxable account.
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-6-step-7',
+    data: {
+      label: <strong>Do you have more immediate goals?</strong>,
+    },
+  },
+  {
+    id: 'phase-6-step-8',
+    data: {
+      label: (
+        <>
+          <strong>
+            Use savings for goals sooner than 3-5 years, a conservative mix of
+            stocks and bonds for goals more than 3-5 years away.
+          </strong>
+          <br />
+          (Common examples include down payments for homes, savings for
+          vehicles, paying down a mortgage, and vacation funds.)
+        </>
+      ),
+    },
+  },
+].map((node) => createFlow(node));
+
 export default [
   ...phase0Nodes,
   ...phase1Nodes,
@@ -391,4 +483,5 @@ export default [
   ...phase3Nodes,
   ...phase4Nodes,
   ...phase5Nodes,
+  ...phase6Nodes,
 ];

@@ -124,6 +124,53 @@ const phase5Edges = [
     skip: true,
     animated: true,
   },
+  {
+    id: 'phase-5-step-0-to-phase-6-step-0',
+    label: 'Yes',
+  },
+].map((edge) => createFlow(edge));
+
+const phase6Edges = [
+  {
+    id: 'phase-6-step-0-to-phase-6-step-1',
+    label: 'Yes',
+  },
+  {
+    id: 'phase-6-step-0-to-phase-6-step-2',
+    label: 'No',
+  },
+  {
+    id: 'phase-6-step-1-to-phase-6-step-2',
+    skip: true,
+    animated: true,
+  },
+  {
+    id: 'phase-6-step-2-to-phase-6-step-3',
+    label: 'Yes',
+  },
+  {
+    id: 'phase-6-step-2-to-phase-6-step-4',
+    label: 'No',
+  },
+  {
+    id: 'phase-6-step-3-to-phase-6-step-4',
+    skip: true,
+    animated: true,
+  },
+  {
+    id: 'phase-6-step-4-to-phase-6-step-5',
+  },
+  {
+    id: 'phase-6-step-5-to-phase-6-step-6',
+    label: 'Yes',
+  },
+  {
+    id: 'phase-6-step-4-to-phase-6-step-7',
+  },
+  {
+    id: 'phase-6-step-7-to-phase-6-step-8',
+    label: 'Yes',
+  },
 ].map((edge) => createFlow(edge));
 
 export default [
@@ -133,4 +180,5 @@ export default [
   ...phase3Edges,
   ...phase4Edges,
   ...phase5Edges,
+  ...phase6Edges,
 ];
