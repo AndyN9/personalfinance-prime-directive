@@ -4,8 +4,13 @@
 }
 
 .react-flow__node {
-  width: 250px;
-  height: 110px;
+  width: 300px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .react-flow__node-customHandles {

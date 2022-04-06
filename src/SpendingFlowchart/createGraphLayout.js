@@ -7,8 +7,8 @@ import Elk from 'elkjs';
     https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges
 */
 
-const DEFAULT_WIDTH = 250;
-const DEFAULT_HEIGHT = 110;
+const DEFAULT_WIDTH = 300;
+const DEFAULT_HEIGHT = 150;
 
 const elk = new Elk({
   defaultLayoutOptions: {
