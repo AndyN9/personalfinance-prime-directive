@@ -1,5 +1,4 @@
 import React from 'react';
-import { Handle } from 'react-flow-renderer';
 
 function createFlow(node) {
   const phase = node.id.split('-step-')[0];
@@ -158,14 +157,19 @@ const phase2Nodes = [
         </strong>
       ),
       handles: [
-        <Handle type="target" />,
-        <Handle id="no" type="source" position="bottom" style={{ left: 50 }} />,
-        <Handle
-          id="yes"
-          type="source"
-          position="bottom"
-          style={{ left: 200 }}
-        />,
+        { type: 'target' },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 200 },
+        },
       ],
     },
     type: 'customHandles',

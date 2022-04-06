@@ -1,14 +1,14 @@
 import React from 'react';
+import { Handle } from 'react-flow-renderer';
 
-function CustomHandlesNode({ id, data, isConnectable }) {
+function CustomHandlesNode({ id, data }) {
   const handles = data?.handles || [];
 
-  // TODO convert handles to array of objects instead of components
   return (
     <>
       {data?.label}
-      {handles.map((handle, index) => (
-        <React.Fragment key={`${id}-handle-${index}`}>{handle}</React.Fragment>
+      {handles.map((handleProps, index) => (
+        <Handle key={`${id}-handle-${index}`} {...handleProps} />
       ))}
     </>
   );
