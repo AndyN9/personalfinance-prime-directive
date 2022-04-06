@@ -11,12 +11,19 @@ React implementation of [/r/personalfinance Prime Directive](https://www.reddit.
     - [x] phase 0
     - [x] phase 1
     - [x] phase 2
-    - [ ] phase 3
+    - [x] phase 3
+    - [x] phase 4
+    - [ ] phase 5
+    - [ ] phase 6
   - [ ] spending edges
     - [x] phase 0
     - [x] phase 1
     - [x] phase 2
-    - [ ] phase 3
+    - [x] phase 3
+    - [x] phase 4
+    - [ ] phase 5
+    - [ ] phase 6
+- [ ] fix edges and handles
 - [ ] create components
   - [ ] title
     - [ ] sub-title (credits)

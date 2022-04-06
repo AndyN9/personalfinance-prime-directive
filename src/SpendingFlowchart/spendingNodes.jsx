@@ -261,6 +261,80 @@ const phase3Nodes = [
     },
     type: 'customHandles',
   },
+  {
+    id: 'phase-3-step-2',
+    data: {
+      label: (
+        <>
+          <strong>Do you have any moderate interest debt?</strong>
+          <br />
+          (i.e., remaining debt over 4-5% interest rate, excluding mortgage)
+        </>
+      ),
+    },
+    // type: 'customHandles',
+  },
+  {
+    id: 'phase-3-step-3',
+    data: {
+      label: (
+        <strong>
+          Evaluate the merits of the 'Avalanche' and 'Snowball' methods and
+          their advantages in your personal financial/psychological situation
+          and apply accordingly to pay off these debts.
+        </strong>
+      ),
+    },
+    // type: 'customHandles',
+  },
 ].map((node) => createFlow(node));
 
-export default [...phase0Nodes, ...phase1Nodes, ...phase2Nodes, ...phase3Nodes];
+const phase4Nodes = [
+  {
+    id: 'phase-4-step-0',
+    data: {
+      label: (
+        <strong>
+          Evaluate the merits of a Roth vs. Traditional IRA in the context of
+          your personal financial situation and max the yearly contribution
+          accordingly.
+        </strong>
+      ),
+    },
+  },
+  {
+    id: 'phase-4-step-1',
+    data: {
+      label: (
+        <>
+          <strong>
+            Are you expecting any large, required purchase or personal
+            investments in the near future?
+          </strong>
+          <br />
+          (College, professional certifications, a car so you can get to work,
+          etc.)
+        </>
+      ),
+    },
+  },
+  {
+    id: 'phase-4-step-2',
+    data: {
+      label: (
+        <strong>
+          Save the amount needed for these expenses in a savings or checking
+          account.
+        </strong>
+      ),
+    },
+  },
+].map((node) => createFlow(node));
+
+export default [
+  ...phase0Nodes,
+  ...phase1Nodes,
+  ...phase2Nodes,
+  ...phase3Nodes,
+  ...phase4Nodes,
+];
