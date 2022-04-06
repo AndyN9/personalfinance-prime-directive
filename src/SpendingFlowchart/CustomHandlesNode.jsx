@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Handle } from 'react-flow-renderer';
 
 function CustomHandlesNode({ id, data }) {
@@ -13,5 +14,10 @@ function CustomHandlesNode({ id, data }) {
     </>
   );
 }
+
+CustomHandlesNode.propTypes = {
+  id: PropTypes.string.isRequired,
+  data: PropTypes.object,
+};
 
 export default React.memo(CustomHandlesNode);
