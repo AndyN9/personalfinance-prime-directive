@@ -183,8 +183,17 @@ const phase2Nodes = [
           nothing above that amount.
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'source-left-a',
+          type: 'source',
+          position: 'left',
+          style: { top: 35 },
+        },
+      ],
     },
-    sourcePosition: 'left',
+    type: 'customHandles',
   },
 ].map((node) => createFlow(node));
 
@@ -199,7 +208,35 @@ const phase3Nodes = [
           (i.e. debt with an interest rate of 10$ or higher)
         </>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'target-right-a',
+          type: 'target',
+          position: 'right',
+          style: { top: 35 },
+        },
+        {
+          id: 'target-right-b',
+          type: 'target',
+          position: 'right',
+          style: { top: 85 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 200 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-3-step-1',
@@ -211,7 +248,19 @@ const phase3Nodes = [
           and apply accordingly to pay off these debts.
         </strong>
       ),
+      handles: [
+        {
+          type: 'target',
+          position: 'top',
+          style: { left: 50 },
+        },
+        {
+          type: 'source',
+          position: 'top',
+        },
+      ],
     },
+    type: 'customHandles',
   },
 ].map((node) => createFlow(node));
 
