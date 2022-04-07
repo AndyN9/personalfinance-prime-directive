@@ -159,16 +159,16 @@ const phase2Nodes = [
       handles: [
         { type: 'target' },
         {
-          id: 'no',
+          id: 'yes',
           type: 'source',
           position: 'bottom',
           style: { left: 50 },
         },
         {
-          id: 'yes',
+          id: 'no',
           type: 'source',
           position: 'bottom',
-          style: { left: 200 },
+          style: { left: 250 },
         },
       ],
     },
@@ -186,10 +186,10 @@ const phase2Nodes = [
       handles: [
         { type: 'target' },
         {
-          id: 'source-left-a',
+          id: 'source-right-a',
           type: 'source',
-          position: 'left',
-          style: { top: 35 },
+          position: 'right',
+          style: { top: 25 },
         },
       ],
     },
@@ -211,28 +211,28 @@ const phase3Nodes = [
       handles: [
         { type: 'target' },
         {
-          id: 'target-right-a',
+          id: 'target-left-a',
           type: 'target',
-          position: 'right',
-          style: { top: 35 },
+          position: 'left',
+          style: { top: 25 },
         },
         {
-          id: 'target-right-b',
+          id: 'target-left-b',
           type: 'target',
-          position: 'right',
-          style: { top: 85 },
-        },
-        {
-          id: 'no',
-          type: 'source',
-          position: 'bottom',
-          style: { left: 50 },
+          position: 'left',
+          style: { top: 125 },
         },
         {
           id: 'yes',
           type: 'source',
           position: 'bottom',
-          style: { left: 200 },
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
         },
       ],
     },
@@ -255,7 +255,7 @@ const phase3Nodes = [
         },
         {
           type: 'source',
-          position: 'left',
+          position: 'right',
         },
       ],
     },
@@ -271,8 +271,28 @@ const phase3Nodes = [
           (i.e., remaining debt over 4-5% interest rate, excluding mortgage)
         </>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'target-left',
+          type: 'target',
+          position: 'left',
+        },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
+        },
+      ],
     },
-    // type: 'customHandles',
+    type: 'customHandles',
   },
   {
     id: 'phase-3-step-3',
@@ -284,8 +304,15 @@ const phase3Nodes = [
           and apply accordingly to pay off these debts.
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          type: 'source',
+          position: 'right',
+        },
+      ],
     },
-    // type: 'customHandles',
+    type: 'customHandles',
   },
 ].map((node) => createFlow(node));
 
@@ -316,7 +343,23 @@ const phase4Nodes = [
           etc.)
         </>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-4-step-2',
@@ -327,7 +370,16 @@ const phase4Nodes = [
           account.
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          type: 'source',
+          position: 'right',
+          style: { top: 25 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
 ].map((node) => createFlow(node));
 
@@ -346,7 +398,40 @@ const phase5Nodes = [
           need to save more if you are behind on retirement savings.)
         </>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'target-left-a',
+          type: 'target',
+          position: 'left',
+          style: { top: 25 },
+        },
+        {
+          id: 'target-left-b',
+          type: 'target',
+          position: 'left',
+          style: { top: 125 },
+        },
+        {
+          id: 'target-right',
+          type: 'target',
+          position: 'right',
+        },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-5-step-1',
@@ -357,7 +442,23 @@ const phase5Nodes = [
           into which you could save more money?
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-5-step-2',
@@ -368,7 +469,18 @@ const phase5Nodes = [
           saved for retirement.
         </strong>
       ),
+      handles: [
+        {
+          type: 'target',
+          style: { left: 50 },
+        },
+        {
+          type: 'source',
+          style: { left: 250 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-5-step-3',
@@ -380,7 +492,20 @@ const phase5Nodes = [
           contribute to a taxable account to reach this goal.
         </strong>
       ),
+      handles: [
+        {
+          type: 'target',
+          position: 'top',
+          style: { left: 50 },
+        },
+        {
+          type: 'source',
+          position: 'top',
+          style: { left: 275 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
 ].map((node) => createFlow(node));
 
@@ -394,13 +519,37 @@ const phase6Nodes = [
           eligible for an investable HSA?
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-6-step-1',
     data: {
       label: <strong>Max yearly HSA contributions</strong>,
+      handles: [
+        { type: 'target' },
+        {
+          type: 'source',
+          position: 'right',
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-6-step-2',
@@ -411,7 +560,28 @@ const phase6Nodes = [
           college expenses?
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'target-left',
+          type: 'target',
+          position: 'left',
+        },
+        {
+          id: 'yes',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 50 },
+        },
+        {
+          id: 'no',
+          type: 'source',
+          position: 'bottom',
+          style: { left: 250 },
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-6-step-3',
@@ -422,7 +592,15 @@ const phase6Nodes = [
           contribute accordingly.
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          type: 'source',
+          position: 'right',
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-6-step-4',
@@ -433,7 +611,21 @@ const phase6Nodes = [
           completely up to you and your personal goals and desires.
         </strong>
       ),
+      handles: [
+        { type: 'target' },
+        {
+          id: 'target-left',
+          type: 'target',
+          position: 'left',
+        },
+        {
+          id: 'source-bottom',
+          type: 'source',
+          position: 'bottom',
+        },
+      ],
     },
+    type: 'customHandles',
   },
   {
     id: 'phase-6-step-5',
@@ -451,6 +643,7 @@ const phase6Nodes = [
         </strong>
       ),
     },
+    type: 'output',
   },
   {
     id: 'phase-6-step-7',
@@ -473,6 +666,7 @@ const phase6Nodes = [
         </>
       ),
     },
+    type: 'output',
   },
 ].map((node) => createFlow(node));
 
