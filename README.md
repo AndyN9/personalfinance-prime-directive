@@ -23,10 +23,11 @@ React implementation of [/r/personalfinance Prime Directive](https://www.reddit.
     - [x] phase 4
     - [x] phase 5
     - [x] phase 6
-- [ ] fix edges and handles
-- [ ] create components
+- [x] fix edges and handles
+- [ ] create node
   - [ ] title
-    - [ ] sub-title (credits)
-  - [ ] phases legend
-  - [ ] flow chart
+  - [x] phases legend
+  - [x] flow chart
+    - [ ] color code mini map
+    - [ ] figure interactivity buttons
 - [ ] style

@@ -15,6 +15,110 @@ function createFlow(node) {
   };
 }
 
+const phaseNodes = [
+  {
+    id: 'legend',
+    type: 'group',
+  },
+  {
+    id: 'phase-0',
+    data: {
+      label: (
+        <>
+          <strong>Step 0:</strong>
+          <br />
+          Budget & reduce expenses, set realistic goals
+        </>
+      ),
+    },
+    type: 'customHandles',
+    parentNode: 'legend',
+  },
+  {
+    id: 'phase-1',
+    data: {
+      label: (
+        <>
+          <strong>Step 1:</strong>
+          <br />
+          Build an emergency fund
+        </>
+      ),
+    },
+    type: 'customHandles',
+    parentNode: 'legend',
+  },
+  {
+    id: 'phase-2',
+    data: {
+      label: (
+        <>
+          <strong>Step 2:</strong>
+          <br />
+          Employer-sponsored matching funds
+        </>
+      ),
+    },
+    type: 'customHandles',
+    parentNode: 'legend',
+  },
+  {
+    id: 'phase-3',
+    data: {
+      label: (
+        <>
+          <strong>Step 3:</strong>
+          <br />
+          Pay down high/moderate interest debts
+        </>
+      ),
+    },
+    type: 'customHandles',
+    parentNode: 'legend',
+  },
+  {
+    id: 'phase-4',
+    data: {
+      label: (
+        <>
+          <strong>Step 4:</strong>
+          <br />
+          Savings for retirement in an IRA & higher education expenses
+        </>
+      ),
+    },
+    type: 'customHandles',
+    parentNode: 'legend',
+  },
+  {
+    id: 'phase-5',
+    data: {
+      label: (
+        <>
+          <strong>Step 5:</strong>
+          <br />
+          Save more for retirement
+        </>
+      ),
+    },
+    type: 'customHandles',
+    parentNode: 'legend',
+  },
+  {
+    id: 'phase-6',
+    data: {
+      label: (
+        <>
+          <strong>Step 6:</strong>
+          <br />
+          Save for other goals & advanced methods
+        </>
+      ),
+    },
+    type: 'customHandles',
+  },
+].map((node) => createFlow(node));
+
 const phase0Nodes = [
   {
     id: 'phase-0-step-0',
@@ -671,6 +775,7 @@ const phase6Nodes = [
 ].map((node) => createFlow(node));
 
 export default [
+  ...phaseNodes,
   ...phase0Nodes,
   ...phase1Nodes,
   ...phase2Nodes,

@@ -15,6 +15,17 @@ function createFlow(edge) {
   };
 }
 
+const phaseEdges = [
+  // README hardcoded order
+  { id: 'phase-1-to-phase-0-step-0' },
+  { id: 'phase-2-to-phase-0-step-0' },
+  { id: 'phase-3-to-phase-0-step-0' },
+  { id: 'phase-4-to-phase-0-step-0' },
+  { id: 'phase-5-to-phase-0-step-0' },
+  { id: 'phase-6-to-phase-0-step-0' },
+  { id: 'phase-0-to-phase-0-step-0' },
+].map((edge) => createFlow(edge));
+
 const phase0Edges = [
   { id: 'phase-0-step-0-to-phase-0-step-1' },
   { id: 'phase-0-step-1-to-phase-0-step-2' },
@@ -194,6 +205,7 @@ const phase6Edges = [
 ].map((edge) => createFlow(edge));
 
 export default [
+  ...phaseEdges,
   ...phase0Edges,
   ...phase1Edges,
   ...phase2Edges,
