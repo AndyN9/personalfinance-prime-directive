@@ -12,6 +12,26 @@ import initialEdges from './spendingEdges';
 const nodeTypes = {
   customHandles: CustomHandlesNode,
 };
+const nodeColor = (node) => {
+  switch (node.id.split('-step-')[0]) {
+    case 'phase-0':
+      return 'navy';
+    case 'phase-1':
+      return 'red';
+    case 'phase-2':
+      return 'yellow';
+    case 'phase-3':
+      return 'green';
+    case 'phase-4':
+      return 'lightblue';
+    case 'phase-5':
+      return 'blue';
+    case 'phase-6':
+      return 'purple';
+    default:
+      return '#fff';
+  }
+};
 
 export default function SpendingFlowchart() {
   const [nodes, setNodes] = useState(initialNodes);
@@ -40,7 +60,7 @@ export default function SpendingFlowchart() {
         nodesConnectable={false}
         elementsSelectable={false}
       >
-        <MiniMap />
+        <MiniMap nodeColor={nodeColor} />
         <Controls />
       </ReactFlow>
     </div>

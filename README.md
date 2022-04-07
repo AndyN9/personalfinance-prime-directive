@@ -9,7 +9,7 @@ Based of the [flowchart](https://i.imgur.com/lSoUQr2.png) created by [/u/atlasvo
 - [x] test react flow
 - [ ] create data files
   - [x] phases group nodes
-  - [ ] spending nodes
+  - [x] spending nodes
     - [x] phase 0
     - [x] phase 1
     - [x] phase 2
@@ -17,7 +17,7 @@ Based of the [flowchart](https://i.imgur.com/lSoUQr2.png) created by [/u/atlasvo
     - [x] phase 4
     - [x] phase 5
     - [x] phase 6
-  - [ ] spending edges
+  - [x] spending edges
     - [x] phase 0
     - [x] phase 1
     - [x] phase 2
@@ -30,7 +30,7 @@ Based of the [flowchart](https://i.imgur.com/lSoUQr2.png) created by [/u/atlasvo
   - [x] title
   - [x] phases legend
   - [x] flow chart
-    - [ ] color code mini map
+    - [x] color code mini map
     - [ ] figure out interactivity buttons
-- [ ] style
+- [x] style
 - [ ] static hosting

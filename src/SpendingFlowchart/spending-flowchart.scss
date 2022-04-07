@@ -10,6 +10,8 @@
   width: 300px;
   height: 150px;
 
+  border-width: 2px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +24,7 @@
   font-size: 12px;
   color: #222;
   text-align: center;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   background: #fff;
   border-color: #1a192b;
@@ -65,31 +67,18 @@
   transform: translate(-163px, -88px) !important;
 }
 
-// TODO loop over with sass
-.phase-0 {
-  border-color: navy;
-}
+$phaseColors: (
+  'phase-0' : navy,
+  'phase-1' : red,
+  'phase-2' : yellow,
+  'phase-3' : green,
+  'phase-4' : lightblue,
+  'phase-5' : blue,
+  'phase-6' : purple,
+);
 
-.phase-1 {
-  border-color: red;
-}
-
-.phase-2 {
-  border-color: yellow;
-}
-
-.phase-3 {
-  border-color: green;
-}
-
-.phase-4 {
-  border-color: lightblue;
-}
-
-.phase-5 {
-  border-color: blue;
-}
-
-.phase-6 {
-  border-color: purple;
+@each $name, $color in $phaseColors {
+  .#{$name} {
+    border-color: $color;
+  }
 }
