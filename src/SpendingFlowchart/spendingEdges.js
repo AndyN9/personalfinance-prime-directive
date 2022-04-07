@@ -17,7 +17,6 @@ function createFlow(edge) {
 
 const phaseEdges = [
   // README hardcoded order
-  { id: 'title-to-phase-6' },
   { id: 'phase-1-to-phase-0-step-0' },
   { id: 'phase-2-to-phase-0-step-0' },
   { id: 'phase-3-to-phase-0-step-0' },

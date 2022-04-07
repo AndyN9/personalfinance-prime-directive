@@ -29,10 +29,12 @@ const phaseNodes = [
       ),
     },
     type: 'customHandles',
+    skip: true,
   },
   {
     id: 'legend',
     type: 'group',
+    skip: true,
   },
   {
     id: 'phase-0',

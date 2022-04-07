@@ -33,3 +33,4 @@ Based of the [flowchart](https://i.imgur.com/lSoUQr2.png) created by [/u/atlasvo
     - [ ] color code mini map
     - [ ] figure out interactivity buttons
 - [ ] style
+- [ ] static hosting

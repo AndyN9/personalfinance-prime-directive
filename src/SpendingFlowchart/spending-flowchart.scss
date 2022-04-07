@@ -47,6 +47,9 @@
   width: 2550px;
   font-size: 18px;
 
+  // README hardcoded
+  transform: translate(-138px, -250px) !important;
+
   border-style: none;
 
   strong {
@@ -59,7 +62,7 @@
   height: 200px;
 
   // README hardcoded to make it fit all phase nodes
-  transform: translate(-163px, 137px) !important;
+  transform: translate(-163px, -88px) !important;
 }
 
 // TODO loop over with sass

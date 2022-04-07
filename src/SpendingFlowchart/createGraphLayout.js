@@ -24,7 +24,7 @@ const createGraphLayout = async (nodes, edges) => {
   const elkEdges = [];
 
   nodes.forEach((flowNode) => {
-    if (flowNode.type === 'group') {
+    if (flowNode.skip) {
       return;
     }
 
