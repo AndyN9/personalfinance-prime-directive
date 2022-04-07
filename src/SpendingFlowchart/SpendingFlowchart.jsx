@@ -61,7 +61,7 @@ export default function SpendingFlowchart() {
         elementsSelectable={false}
       >
         <MiniMap nodeColor={nodeColor} />
-        <Controls />
+        <Controls showInteractive={false} />
       </ReactFlow>
     </div>
   );
