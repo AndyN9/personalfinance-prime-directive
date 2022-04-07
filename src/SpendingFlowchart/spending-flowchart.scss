@@ -43,12 +43,23 @@
   }
 }
 
+.title {
+  width: 2550px;
+  font-size: 18px;
+
+  border-style: none;
+
+  strong {
+    font-size: 24px;
+  }
+}
+
 .legend {
   width: 2600px;
   height: 200px;
 
   // README hardcoded to make it fit all phase nodes
-  transform: translate(-163px, -88px) !important;
+  transform: translate(-163px, 137px) !important;
 }
 
 // TODO loop over with sass

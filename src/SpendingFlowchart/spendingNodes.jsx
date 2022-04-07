@@ -17,6 +17,20 @@ function createFlow(node) {
 
 const phaseNodes = [
   {
+    id: 'title',
+    data: {
+      label: (
+        <>
+          <strong>Personal Income Spending Flowchart - United States</strong>
+          <br />
+          Based off the flowchart created by /u/atlasvoid for the
+          /r/personalfinance subreddit.
+        </>
+      ),
+    },
+    type: 'customHandles',
+  },
+  {
     id: 'legend',
     type: 'group',
   },
