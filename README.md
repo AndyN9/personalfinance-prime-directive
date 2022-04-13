@@ -10,5 +10,6 @@ Based of the [flowchart](https://i.imgur.com/lSoUQr2.png) created by [/u/atlasvo
 npm install
 npm run build
 ```
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
