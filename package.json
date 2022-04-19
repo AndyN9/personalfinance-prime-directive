@@ -1,9 +1,9 @@
 {
   "name": "personalfinance-prime-directive",
+  "version": "0.0.0",
   "private": true,
   "description": "React implementation of /r/personalfinance Prime Directive",
   "author": "Andy Nguyen <13814584+AndyN9@users.noreply.github.com>",
-  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
