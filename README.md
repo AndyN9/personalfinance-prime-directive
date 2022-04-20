@@ -5,10 +5,15 @@ React implementation of [/r/personalfinance Prime Directive](https://www.reddit.
 
 Based of the [flowchart](https://i.imgur.com/lSoUQr2.png) created by [/u/atlasvoid](https://www.reddit.com/user/atlasvoid) for the [/r/personalfinance](https://www.reddit.com/r/personalfinance/) subreddit.
 
-## Run locally
+## Installation
 ```
+// local development
 npm install
+npm run dev
+
+// local build and preview
 npm run build
+npm run preview
 ```
 
 ## License
