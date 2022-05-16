@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactFlow, { MiniMap, Controls } from 'react-flow-renderer';
+import ReactFlow, { Controls, MiniMap } from 'react-flow-renderer';
 
 import CustomHandlesNode from './CustomHandlesNode';
 import createGraphLayout from './createGraphLayout';
@@ -60,8 +60,8 @@ export default function SpendingFlowchart() {
         nodesConnectable={false}
         elementsSelectable={false}
       >
-        <MiniMap nodeColor={nodeColor} />
         <Controls showInteractive={false} />
+        <MiniMap nodeColor={nodeColor} />
       </ReactFlow>
     </div>
   );
