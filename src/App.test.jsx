@@ -15,17 +15,17 @@ vi.stubGlobal('ResizeObserver', ResizeObserverMock);
 describe('app is rendering', () => {
   it('has a title', () => {
     render(<App />);
-    const titleElement = screen.getByText(
+    const title = screen.getByText(
       'Personal Income Spending Flowchart - United States'
     );
-    expect(titleElement).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
   });
 
   it('has a subtitle', () => {
     render(<App />);
-    const titleElement = screen.getByText(
+    const subtitle = screen.getByText(
       'Based off the flowchart created by /u/atlasvoid for the /r/personalfinance subreddit.'
     );
-    expect(titleElement).toBeInTheDocument();
+    expect(subtitle).toBeInTheDocument();
   });
 });
