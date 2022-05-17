@@ -16,7 +16,7 @@ afterEach(() => {
   cleanup();
 });
 
-describe('spending flowchart is rendering', () => {
+describe('SpendingFlowchart is rendering', () => {
   it('has a flowchart', () => {
     render(<SpendingFlowchart />);
 
