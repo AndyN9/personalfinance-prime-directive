@@ -48,39 +48,17 @@ describe('SpendingFlowchart', () => {
 });
 
 describe('nodeColor', () => {
-  it('should return the correct color for a phase-0 node', () => {
-    const color = nodeColor({ id: 'phase-0' });
-    expect(color).toBe('navy');
-  });
-
-  it('should return the correct color for a phase-1 node', () => {
-    const color = nodeColor({ id: 'phase-1' });
-    expect(color).toBe('red');
-  });
-
-  it('should return the correct color for a phase-2 node', () => {
-    const color = nodeColor({ id: 'phase-2' });
-    expect(color).toBe('yellow');
-  });
-
-  it('should return the correct color for a phase-3 node', () => {
-    const color = nodeColor({ id: 'phase-3' });
-    expect(color).toBe('green');
-  });
-
-  it('should return the correct color for a phase-4 node', () => {
-    const color = nodeColor({ id: 'phase-4' });
-    expect(color).toBe('lightblue');
-  });
-
-  it('should return the correct color for a phase-5 node', () => {
-    const color = nodeColor({ id: 'phase-5' });
-    expect(color).toBe('blue');
-  });
-
-  it('should return the correct color for a phase-6 node', () => {
-    const color = nodeColor({ id: 'phase-6' });
-    expect(color).toBe('purple');
+  it.each([
+    ['phase-0', 'navy'],
+    ['phase-1', 'red'],
+    ['phase-2', 'yellow'],
+    ['phase-3', 'green'],
+    ['phase-4', 'lightblue'],
+    ['phase-5', 'blue'],
+    ['phase-6', 'purple'],
+  ])('should return the correct color for a %s node', (phase, expected) => {
+    const color = nodeColor({ id: phase });
+    expect(color).toBe(expected);
   });
 
   it('should return the correct color for anything other node', () => {
