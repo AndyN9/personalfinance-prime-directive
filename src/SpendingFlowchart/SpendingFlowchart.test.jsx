@@ -16,8 +16,8 @@ afterEach(() => {
   cleanup();
 });
 
-describe('SpendingFlowchart is rendering', () => {
-  it('has a flowchart', () => {
+describe('SpendingFlowchart', () => {
+  it('should render a flowchart', () => {
     render(<SpendingFlowchart />);
 
     const container = document.querySelector('.react-flow');
@@ -27,7 +27,7 @@ describe('SpendingFlowchart is rendering', () => {
     expect(flowchart).toBeInTheDocument();
   });
 
-  it('has controls', () => {
+  it('should render controls', () => {
     render(<SpendingFlowchart />);
 
     const zoomIn = screen.getByTitle('zoom in');
@@ -40,50 +40,50 @@ describe('SpendingFlowchart is rendering', () => {
     expect(fitView).toBeInTheDocument();
   });
 
-  it('has a minimap', () => {
+  it('should render a minimap', () => {
     render(<SpendingFlowchart />);
     const minimap = document.querySelector('.react-flow__minimap');
     expect(minimap).toBeInTheDocument();
   });
 });
 
-describe('nodeColor is outputting correct colors', () => {
-  it('returns the correct color for phase-0', () => {
+describe('nodeColor', () => {
+  it('should return the correct color for a phase-0 node', () => {
     const color = nodeColor({ id: 'phase-0' });
     expect(color).toBe('navy');
   });
 
-  it('returns the correct color for phase-1', () => {
+  it('should return the correct color for a phase-1 node', () => {
     const color = nodeColor({ id: 'phase-1' });
     expect(color).toBe('red');
   });
 
-  it('returns the correct color for phase-2', () => {
+  it('should return the correct color for a phase-2 node', () => {
     const color = nodeColor({ id: 'phase-2' });
     expect(color).toBe('yellow');
   });
 
-  it('returns the correct color for phase-3', () => {
+  it('should return the correct color for a phase-3 node', () => {
     const color = nodeColor({ id: 'phase-3' });
     expect(color).toBe('green');
   });
 
-  it('returns the correct color for phase-4', () => {
+  it('should return the correct color for a phase-4 node', () => {
     const color = nodeColor({ id: 'phase-4' });
     expect(color).toBe('lightblue');
   });
 
-  it('returns the correct color for phase-5', () => {
+  it('should return the correct color for a phase-5 node', () => {
     const color = nodeColor({ id: 'phase-5' });
     expect(color).toBe('blue');
   });
 
-  it('returns the correct color for phase-6', () => {
+  it('should return the correct color for a phase-6 node', () => {
     const color = nodeColor({ id: 'phase-6' });
     expect(color).toBe('purple');
   });
 
-  it('returns the correct color for default', () => {
+  it('should return the correct color for anything other node', () => {
     const color = nodeColor({ id: 'default' });
     expect(color).toBe('#fff');
   });

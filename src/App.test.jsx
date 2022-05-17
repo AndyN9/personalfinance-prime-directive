@@ -16,8 +16,8 @@ afterEach(() => {
   cleanup();
 });
 
-describe('app is rendering', () => {
-  it('has a title', () => {
+describe('App', () => {
+  it('should have a title', () => {
     render(<App />);
     const title = screen.getByText(
       'Personal Income Spending Flowchart - United States'
@@ -25,7 +25,7 @@ describe('app is rendering', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('has a subtitle', () => {
+  it('should have a subtitle', () => {
     render(<App />);
     const subtitle = screen.getByText(
       'Based off the flowchart created by /u/atlasvoid for the /r/personalfinance subreddit.'
