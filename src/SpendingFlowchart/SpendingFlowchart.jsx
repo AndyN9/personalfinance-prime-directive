@@ -12,7 +12,7 @@ import initialEdges from './spendingEdges';
 const nodeTypes = {
   customHandles: CustomHandlesNode,
 };
-const nodeColor = (node) => {
+export const nodeColor = (node) => {
   switch (node.id.split('-step-')[0]) {
     case 'phase-0':
       return 'navy';
@@ -33,7 +33,7 @@ const nodeColor = (node) => {
   }
 };
 
-export default function SpendingFlowchart() {
+export function SpendingFlowchart() {
   const [nodes, setNodes] = useState(initialNodes);
   // eslint-disable-next-line no-unused-vars
   const [edges, setEdges] = useState(initialEdges);
