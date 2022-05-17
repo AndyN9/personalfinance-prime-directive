@@ -6,8 +6,8 @@ import createGraphLayout from './createGraphLayout';
 
 import './spending-flowchart.scss';
 
-import initialNodes from './spendingNodes';
-import initialEdges from './spendingEdges';
+import initialNodes from './data/spendingNodes';
+import initialEdges from './data/spendingEdges';
 
 const nodeTypes = {
   customHandles: CustomHandlesNode,
