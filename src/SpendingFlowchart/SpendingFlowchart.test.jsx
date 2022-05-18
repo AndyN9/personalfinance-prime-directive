@@ -30,13 +30,13 @@ describe('SpendingFlowchart', () => {
   it('should render controls', () => {
     render(<SpendingFlowchart />);
 
-    const zoomIn = screen.getByTitle('zoom in');
+    const zoomIn = screen.getByRole('button', { name: 'zoom in' });
     expect(zoomIn).toBeInTheDocument();
 
-    const zoomOut = screen.getByTitle('zoom out');
+    const zoomOut = screen.getByRole('button', { name: 'zoom out' });
     expect(zoomOut).toBeInTheDocument();
 
-    const fitView = screen.getByTitle('fit view');
+    const fitView = screen.getByRole('button', { name: 'fit view' });
     expect(fitView).toBeInTheDocument();
   });
 
