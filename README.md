@@ -14,6 +14,10 @@ npm run dev
 // local build and preview
 npm run build
 npm run preview
+
+// tests
+npm run test // single run of unit and e2e tests
+npm run test:unit // run unit tests with file watch
 ```
 
 ## License
